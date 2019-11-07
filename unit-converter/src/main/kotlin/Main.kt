@@ -130,9 +130,9 @@ fun main() {
         }
 
         val value = input.toDouble()
-        val from = scanner.hasNextMeasurement()
+        val from = scanner.nextMeasurement()
         scanner.next() // skipping to/in part
-        val to = scanner.hasNextMeasurement()
+        val to = scanner.nextMeasurement()
 
         val fromMeasurement = findByName(from)
         val toMeasurement = findByName(to)
@@ -153,4 +153,4 @@ fun main() {
     }
 }
 
-fun Scanner.hasNextMeasurement(): String = if (this.hasNext("(?i)degree(s)?")) "${this.next()} ${this.next()}" else this.next()
+fun Scanner.nextMeasurement(): String = if (this.hasNext("(?i)degree(s)?")) "${this.next()} ${this.next()}" else this.next()
